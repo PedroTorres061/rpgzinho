@@ -1,0 +1,78 @@
+#include <stdio.h>
+
+int main() {
+    int forca, inte, agi, vig, pre;
+    int forca2, inte2, agi2, vig2, pre2;
+    int opcao1, opcao2;
+
+    printf("Para começar o jogo, escolha as opções no menu:\n");
+    printf("1 - iniciar jogo\n2 - encerrar jogo\n");
+    scanf("%d", &opcao1);
+
+    switch(opcao1) {
+        case 1: {
+            printf("Digite o valor dos atributos do seu personagem (forca, intelecto, agilidade, vigor, presenca):\n");
+            scanf("%d %d %d %d %d", &forca, &inte, &agi, &vig, &pre);
+
+            printf("Digite o valor dos atributos do seu segundo personagem (forca, intelecto, agilidade, vigor, presenca):\n");
+            scanf("%d %d %d %d %d", &forca2, &inte2, &agi2, &vig2, &pre2);
+
+            printf("Agora, escolha qual atributo gostaria de comparar:\n");
+            printf("1 - Forca\n2 - Intelecto\n3 - Agilidade\n4 - Vigor\n5 - Presenca\n");
+            scanf("%d", &opcao2);
+
+            if(opcao2 == 1) {
+                if(forca > forca2)
+                    printf("A forca do primeiro personagem é maior\n");
+                else if(forca < forca2)
+                    printf("A forca do segundo personagem é maior\n");
+                else
+                    printf("O atributo forca é igual para os dois.\n");
+            }
+            else if(opcao2 == 2) {
+                if(inte > inte2)
+                    printf("O intelecto do primeiro personagem é maior\n");
+                else if(inte < inte2)
+                    printf("O intelecto do segundo personagem é maior\n");
+                else
+                    printf("O atributo intelecto é igual para os dois.\n");
+            }
+            else if(opcao2 == 3) {
+                if(agi > agi2)
+                    printf("A agilidade do primeiro personagem é maior\n");
+                else if(agi < agi2)
+                    printf("A agilidade do segundo personagem é maior\n");
+                else
+                    printf("O atributo agilidade é igual para os dois.\n");
+            }
+            else if(opcao2 == 4) {
+                if(vig > vig2)
+                    printf("O vigor do primeiro personagem é maior\n");
+                else if(vig < vig2)
+                    printf("O vigor do segundo personagem é maior\n");
+                else
+                    printf("O atributo vigor é igual para os dois.\n");
+            }
+            else if(opcao2 == 5) {
+                if(pre > pre2)
+                    printf("A presença do primeiro personagem é maior\n");
+                else if(pre < pre2)
+                    printf("A presença do segundo personagem é maior\n");
+                else
+                    printf("O atributo presença é igual para os dois.\n");
+            }
+            else {
+                printf("Erro, opção inválida, tente novamente.\n");
+            }
+            break;
+        }
+        case 2:
+            printf("Jogo encerrado.\n");
+            break;
+
+        default:
+            printf("Opção inválida.\n");
+    }
+
+    return 0;
+}
